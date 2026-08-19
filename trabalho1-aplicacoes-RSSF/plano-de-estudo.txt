@@ -1,1 +1,96 @@
+Overleaf project: https://www.overleaf.com/project/6a84ecdb5814eef07c09e14e
 
+WSN FOR INDUSTRIAL CONDITION MONITORING - STUDY PLAN
+======================================================
+Target length: ~5 pages (excluding references)
+
+1. INTRODUCTION (~0.5 p)
+------------------------
+- Define WSN briefly.
+- State the chosen application: WSN for industrial condition
+  monitoring / predictive maintenance.
+- One paragraph outlining the rest of the paper.
+
+2. APPLICATION AND MOTIVATION (~1.25 p)
+----------------------------------------
+2.1 Scenario
+    - Rotating machinery (motors, pumps, bearings, compressors)
+      monitored continuously to detect degradation before failure.
+
+2.2 Why a Wireless Sensor Network
+    - Cabling cost and installation time in a plant.
+    - Machinery that rotates or moves.
+    - Retrofitting existing equipment.
+    - Ability to instrument non-critical assets that would not
+      justify wired sensors.
+
+2.3 Requirements
+    - Reliability under harsh electromagnetic conditions.
+    - Long node lifetime.
+    - Bounded latency.
+    - Tolerance to metal-rich multipath.
+
+3. NETWORK IMPLEMENTATION (~1.75 p)
+-------------------------------------
+3.1 Architecture
+    - Sensor nodes -> routers/mesh -> gateway -> plant server /
+      edge processing.
+
+3.2 Node Hardware
+    - MCU, transceiver, antenna, power supply, sensing front-end.
+    - Local pre-processing (e.g., on-node FFT to avoid streaming
+      raw vibration data).
+
+3.3 Communication Standards
+    - IEEE 802.15.4-based radios in the 2.4 GHz ISM band.
+    - WirelessHART (IEC 62591) and ISA100.11a (ANSI/ISA100.11a-2011).
+    - Also mention ZigBee and WIA-PA.
+
+3.4 Energy Management
+    - Duty cycling.
+    - On-node feature extraction.
+    - The battery-replacement problem.
+    - Energy harvesting as a mitigation.
+
+3.5 Interference and Coexistence
+    - Shared 2.4 GHz band.
+    - Clear channel assessment and channel blacklisting as
+      standardized mitigations.
+
+4. SENSORS (~1 p)
+------------------
+- Accelerometer/vibration (primary modality: bearing wear,
+  misalignment, imbalance).
+- Temperature.
+- Current/power (motor current).
+- Acoustic emission.
+- Pressure, humidity.
+- Note sampling-rate implications: vibration needs kHz-range
+  sampling, driving the energy and bandwidth budget, unlike
+  temperature (Hz range).
+- Optional: summary table (modality | measured quantity |
+  typical sampling rate).
+
+5. PROPOSED ADVANCEMENTS: NOISE MODULATION (~0.5 p)
+------------------------------------------------------
+- Frame as emerging, not deployed.
+- Energy harvesting and battery-free nodes as the direction of
+  travel.
+- Noise modulation (NoiseMod) as a candidate physical-layer
+  technique.
+- State its limits explicitly:
+    - Short-range only (energy crossover distance depends on
+      carrier frequency).
+    - Fading error floor without diversity.
+    - Low data rate -- suited to status/temperature reporting,
+      not raw vibration streaming.
+
+6. CONCLUSION (~0.25 p)
+-------------------------
+- Summarize application, implementation, and sensing discussion.
+- Close with the outlook given by noise modulation.
+
+REFERENCES
+==========
+(see wsn_industrial_paper.tex for full bibliography;
+ verify [iiot2018] venue/year before submission)
