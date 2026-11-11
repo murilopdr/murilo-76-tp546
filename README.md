@@ -10,3 +10,5 @@ Repositório para a disciplina de Internet das Coisas e Redes Veiculares
 
 **Trabalho 3 — Problemas de Segurança em Redes IoT:**
 [Ataques de *Jamming* em Redes IoT](https://github.com/murilopdr/murilo-76-tp546/blob/main/trabalho3-seguranca/trabalho3.pdf) 
+
+**Trabalho Prático:** [FreezerGuard — tomada inteligente para proteção de freezers](https://github.com/murilopdr/murilo-76-tp546/blob/main/trabalho-pratico),com [vídeo explicativo](https://youtu.be/aj1AfdlZVJc)
